@@ -51,3 +51,23 @@ graph LR
         M --> B
 ```
 ### Prompts
+
+Base on this use case(I attach my usecase picture). I want a billing summary as python and this is the specific line of code for that usecase
+
+     * Calculates the total tuition for a student based on enrolled credits.
+     * Returns -1.0 if the student is not found.
+     */
+    public double calculateTuition(String studentId) {
+        Student student = students.get(studentId);
+        if (student == null) {
+            return -1.0;
+        }
+        int totalCredits = 0;
+        for (String code : student.getEnrolledCourses()) {
+            Course c = courses.get(code);
+            if (c != null) {
+                totalCredits += c.getCredits();
+            }
+        }
+        return totalCredits * TUITION_PER_CREDIT;
+    }
