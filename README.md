@@ -3,7 +3,29 @@ This is an unknown application written in Java
 
 ---- For Submission (you must fill in the information below) ----
 ### Use Case Diagram
+```mermaid
+graph LR
+    User((User))
+    
+    subgraph "Student enrollment System"
+        UC1(Register New Student)
+        UC2(View All Course)
+        UC3(Register course)
+        UC4(Drop course)
+        UC5(View their schedule)
+        UC6(Billing Summary)
+        UC7(Edit My Profile)
 
+    end
+
+    User --> UC1
+    User --> UC2
+    User --> UC3
+    User --> UC4
+    User --> UC5
+    User --> UC6
+    User --> UC7
+```
 ### Flowchart of the main workflow
 ```mermaid
     flowchart TD
